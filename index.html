@@ -6,7 +6,6 @@
   <title>Paras Sukheja - Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Global */
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
@@ -19,7 +18,6 @@
     a { color: #007acc; text-decoration: none; transition: 0.3s; }
     a:hover { color: #005f99; }
 
-    /* Navbar */
     nav {
       position: fixed;
       top: 0;
@@ -36,7 +34,6 @@
     nav a { color: #fff; font-weight: bold; transition: transform 0.3s; }
     nav a:hover { color: #00bfff; }
 
-    /* Hero */
     header {
       background: linear-gradient(to right, #1a1a1a, #333);
       color: #fff;
@@ -58,14 +55,11 @@
     }
     header a:hover { background: #005f99; transform: scale(1.05); }
 
-    /* Sections */
     section { max-width: 1000px; margin: auto; padding: 80px 20px; }
     h2 { font-size: 2.2em; margin-bottom: 30px; text-align: center; }
 
-    /* About Me */
-    #about p { margin-bottom: 15px; line-height: 1.6; animation: fadeIn 1s ease-in-out; }
+    #about p { margin-bottom: 15px; line-height: 1.6; }
 
-    /* Skills */
     #skills ul { list-style: none; padding: 0; text-align: center; }
     #skills li {
       background: #fff;
@@ -75,11 +69,10 @@
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       max-width: 500px;
-      transition: 0.3s, background 0.3s, color 0.3s;
+      transition: 0.3s;
     }
     #skills li:hover { transform: scale(1.05); background: #e6f7ff; }
 
-    /* Projects */
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -102,7 +95,6 @@
     }
     .card a:hover { background: #005f99; }
 
-    /* Resume */
     #resume { text-align: center; }
     #resume a {
       display: inline-block;
@@ -111,11 +103,8 @@
       background: #007acc;
       color: #fff;
       border-radius: 5px;
-      transition: background 0.3s;
     }
-    #resume a:hover { background: #005f99; }
 
-    /* Contact */
     #contact { text-align: center; }
     .contact a {
       display: inline-block;
@@ -124,80 +113,64 @@
       background: #007acc;
       color: #fff;
       border-radius: 5px;
-      transition: background 0.3s;
     }
-    .contact a:hover { background: #005f99; }
 
-    /* Footer */
     footer {
       background: linear-gradient(to right, #1a1a1a, #333);
       color: #fff;
       text-align: center;
       padding: 50px 20px;
-      transition: background 0.3s, color 0.3s;
     }
 
-    /* Animations */
     @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
-    @keyframes fadeInDown { from {opacity:0; transform: translateY(-20px);} to {opacity:1; transform: translateY(0);} }
-    @keyframes fadeInUp { from {opacity:0; transform: translateY(20px);} to {opacity:1; transform: translateY(0);} }
+    @keyframes fadeInDown { from {opacity:0; transform: translateY(-20px);} to {opacity:1;} }
+    @keyframes fadeInUp { from {opacity:0; transform: translateY(20px);} to {opacity:1;} }
 
-    /* Dark Mode */
-    .dark {
-      background: #1a1a1a;
-      color: #eee;
-    }
+    .dark { background: #1a1a1a; color: #eee; }
     .dark header { background: linear-gradient(to right, #fff, #ddd); color: #333; }
     .dark footer { background: linear-gradient(to right, #fff, #ddd); color: #333; }
     .dark .card, .dark #skills li { background: #333; color: #fff; }
-    .dark header a, .dark #resume a, .dark .card a, .dark .contact a { color: #fff; }
-    .dark header a:hover, .dark #resume a:hover, .dark .card a:hover, .dark .contact a:hover { background: #005f99; }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#resume">Resume</a>
-    <a href="#contact">Contact</a>
-    <a href="#" id="mode-toggle" onclick="toggleMode()">🌙</a>
-  </nav>
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#resume">Resume</a>
+  <a href="#contact">Contact</a>
+  <a href="#" id="mode-toggle" onclick="toggleMode()">🌙</a>
+</nav>
 
-  <!-- Hero -->
-  <header>
-    <h1>Paras Sukheja</h1>
-    <p>Aspiring Data Analyst & Data Scientist</p>
-    <a href="https://github.com/ParasSukheja/data_analyst_portfolio" target="_blank">View My GitHub Portfolio</a>
-  </header>
+<header>
+  <h1>Paras Sukheja</h1>
+  <p>Aspiring Data Analyst & Data Scientist</p>
+  <a href="https://github.com/ParasSukheja/data_analyst_portfolio" target="_blank">View My GitHub Portfolio</a>
+</header>
 
-  <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hi, I'm Paras. I have strong skills in <b>Excel, SQL, Python, Statistics, and Power BI</b>, and I’m currently learning <b>Machine Learning, Tableau, Deep Learning, and AI</b>. I enjoy transforming raw data into actionable insights and building dashboards and reports that help businesses make data-driven decisions.</p>
-    <p>I recently completed my Bachelor’s in Computer Applications and I am pursuing a PG Diploma in Data Science & Analytics. I am passionate about solving real-world problems using data and continuously improving my analytical and technical skills.</p>
-    <p>My goal is to work as a Data Analyst / Data Scientist where I can apply my knowledge, contribute to meaningful projects, and keep learning in a dynamic environment.</p>
-  </section>
+<section id="about">
+  <h2>About Me</h2>
+  <p>Hi, I'm Paras. I have strong skills in <b>Excel, SQL, Python, Statistics, and Power BI</b>, and I have also learned <b>Machine Learning</b>. I’m currently learning <b>Tableau, Deep Learning, and AI</b>. I enjoy transforming raw data into actionable insights and building dashboards and reports that help businesses make data-driven decisions.</p>
+  <p>I recently completed my Bachelor’s in Computer Applications and I am pursuing a PG Diploma in Data Science & Analytics. I am passionate about solving real-world problems using data and continuously improving my analytical and technical skills.</p>
+  <p>My goal is to work as a Data Analyst / Data Scientist where I can apply my knowledge, contribute to meaningful projects, and keep learning in a dynamic environment.</p>
+</section>
 
-  <!-- Skills -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Excel, SQL, Python</li>
-      <li>Pandas, NumPy, Matplotlib, Seaborn, Plotly</li>
-      <li>Statistics</li>
-      <li>Power BI</li>
-      <li>Machine Learning: Regression, Classification, Clustering</li>
-      <li>Tableau (Learning)</li>
-      <li>Deep Learning & AI (Learning)</li>
-      <li>Git, Jupyter Notebook, VS Code</li>
-    </ul>
-  </section>
+<section id="skills">
+  <h2>Skills</h2>
+  <ul>
+    <li>Excel, SQL, Python</li>
+    <li>Pandas, NumPy, Matplotlib, Seaborn, Plotly</li>
+    <li>Statistics</li>
+    <li>Power BI</li>
+    <li>Machine Learning: Regression, Classification, Clustering, Model Evaluation</li>
+    <li>Tableau (Learning)</li>
+    <li>Deep Learning & AI (Learning)</li>
+    <li>Git, Jupyter Notebook, VS Code</li>
+  </ul>
+</section>
 
-    <!-- PROJECT -->
- <section id="projects">
+<section id="projects">
   <h2>Projects</h2>
   <div class="projects">
 
@@ -232,41 +205,33 @@
   </div>
 </section>
 
-  <!-- Resume -->
-  <section id="resume">
-    <h2>Resume</h2>
-    <p>You can view or download my resume by clicking the button below:</p>
-    <a href="https://drive.google.com/file/d/1vvo8uBkU0WtQTBTk4jv2EToC_tYPYKwI/view?usp=sharing" target="_blank">View Resume →</a>
-  </section>
+<section id="resume">
+  <h2>Resume</h2>
+  <p>You can view or download my resume by clicking the button below:</p>
+  <a href="https://drive.google.com/file/d/1vvo8uBkU0WtQTBTk4jv2EToC_tYPYKwI/view?usp=sharing" target="_blank">View Resume →</a>
+</section>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact">
-      <a href="mailto:sukheja.paras@gmail.com">📧 Email</a>
-      <a href="https://www.linkedin.com/in/paras-sukheja-689822327/" target="_blank">🔗 LinkedIn</a>
-      <a href="https://github.com/ParasSukheja" target="_blank">💻 GitHub</a>
-    </div>
-  </section>
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact">
+    <a href="mailto:sukheja.paras@gmail.com">📧 Email</a>
+    <a href="https://www.linkedin.com/in/paras-sukheja-689822327/" target="_blank">🔗 LinkedIn</a>
+    <a href="https://github.com/ParasSukheja" target="_blank">💻 GitHub</a>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Paras Sukheja | Portfolio Website</p>
-  </footer>
+<footer>
+  <p>© 2025 Paras Sukheja | Portfolio Website</p>
+</footer>
 
-  <!-- JS for Dark Mode -->
-  <script>
-    function toggleMode() {
-      const body = document.body;
-      const toggle = document.getElementById("mode-toggle");
+<script>
+function toggleMode(){
+  const body=document.body;
+  const toggle=document.getElementById("mode-toggle");
+  body.classList.toggle("dark");
+  toggle.textContent=body.classList.contains("dark")?"☀️":"🌙";
+}
+</script>
 
-      body.classList.toggle("dark");
-
-      // Change icon
-      toggle.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
-    }
-  </script>
 </body>
 </html>
-
-
