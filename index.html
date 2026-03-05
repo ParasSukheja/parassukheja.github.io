@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paras Sukheja - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+      transition: background 0.3s, color 0.3s;
+    }
+    a { color: #007acc; text-decoration: none; transition: 0.3s; }
+    a:hover { color: #005f99; }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #1a1a1a;
+      color: #fff;
+      padding: 10px 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+    nav a { color: #fff; font-weight: bold; transition: transform 0.3s; }
+    nav a:hover { color: #00bfff; }
+
+    header {
+      background: linear-gradient(to right, #1a1a1a, #333);
+      color: #fff;
+      text-align: center;
+      padding: 120px 20px;
+      transition: background 0.3s, color 0.3s;
+    }
+    header h1 { margin: 0; font-size: 3.5em; animation: fadeInDown 1.5s; }
+    header p { font-size: 1.2em; margin-top: 10px; animation: fadeInUp 2s; }
+    header a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #007acc;
+      color: #fff;
+      border-radius: 5px;
+      transition: 0.3s;
+      animation: fadeIn 2.5s;
+    }
+    header a:hover { background: #005f99; transform: scale(1.05); }
+
+    section { max-width: 1000px; margin: auto; padding: 80px 20px; }
+    h2 { font-size: 2.2em; margin-bottom: 30px; text-align: center; }
+
+    #about p { margin-bottom: 15px; line-height: 1.6; }
+
+    #skills ul { list-style: none; padding: 0; text-align: center; }
+    #skills li {
+      background: #fff;
+      color: #333;
+      margin: 10px auto;
+      padding: 12px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 500px;
+      transition: 0.3s;
+    }
+    #skills li:hover { transform: scale(1.05); background: #e6f7ff; }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .card h3 { margin-top: 0; }
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
+      background: #007acc;
+      color: #fff;
+      border-radius: 5px;
+    }
+    .card a:hover { background: #005f99; }
+
+    #resume { text-align: center; }
+    #resume a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 25px;
+      background: #007acc;
+      color: #fff;
+      border-radius: 5px;
+    }
+
+    #contact { text-align: center; }
+    .contact a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background: #007acc;
+      color: #fff;
+      border-radius: 5px;
+    }
+
+    footer {
+      background: linear-gradient(to right, #1a1a1a, #333);
+      color: #fff;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+    @keyframes fadeInDown { from {opacity:0; transform: translateY(-20px);} to {opacity:1;} }
+    @keyframes fadeInUp { from {opacity:0; transform: translateY(20px);} to {opacity:1;} }
+
+    .dark { background: #1a1a1a; color: #eee; }
+    .dark header { background: linear-gradient(to right, #fff, #ddd); color: #333; }
+    .dark footer { background: linear-gradient(to right, #fff, #ddd); color: #333; }
+    .dark .card, .dark #skills li { background: #333; color: #fff; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#resume">Resume</a>
+  <a href="#contact">Contact</a>
+  <a href="#" id="mode-toggle" onclick="toggleMode()">🌙</a>
+</nav>
+
+<header>
+  <h1>Paras Sukheja</h1>
+  <p>Aspiring Data Analyst & Data Scientist</p>
+  <a href="https://github.com/ParasSukheja/data_analyst_portfolio" target="_blank">View My GitHub Portfolio</a>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>Hi, I'm Paras. I have strong skills in <b>Excel, SQL, Python, Statistics, and Power BI</b>, and I have also learned <b>Machine Learning</b>. I’m currently learning <b>Tableau, Deep Learning, and AI</b>. I enjoy transforming raw data into actionable insights and building dashboards and reports that help businesses make data-driven decisions.</p>
+  <p>I recently completed my Bachelor’s in Computer Applications and I am pursuing a PG Diploma in Data Science & Analytics. I am passionate about solving real-world problems using data and continuously improving my analytical and technical skills.</p>
+  <p>My goal is to work as a Data Analyst / Data Scientist where I can apply my knowledge, contribute to meaningful projects, and keep learning in a dynamic environment.</p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <ul>
+    <li>Excel, SQL, Python</li>
+    <li>Pandas, NumPy, Matplotlib, Seaborn, Plotly</li>
+    <li>Statistics</li>
+    <li>Power BI</li>
+    <li>Machine Learning: Regression, Classification, Clustering, Model Evaluation</li>
+    <li>Tableau (Learning)</li>
+    <li>Deep Learning & AI (Learning)</li>
+    <li>Git, Jupyter Notebook, VS Code</li>
+  </ul>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+
+    <div class="card">
+      <h3>📊 Retail Supermarket Sales Dashboard (Excel)</h3>
+      <p>Interactive dashboard analyzing sales performance across products and regions using PivotTables and charts.</p>
+      <a href="https://github.com/ParasSukheja/Data_Analyst_Portfolio/tree/main/Excel_Projects/Project_Retail_SupermarketSales" target="_blank">View Project →</a>
+    </div>
+
+    <div class="card">
+      <h3>🛒 E-Commerce Sales Analysis (SQL)</h3>
+      <p>SQL queries to extract insights on customer behavior, top-selling products, and revenue trends.</p>
+      <a href="https://github.com/ParasSukheja/Data_Analyst_Portfolio/tree/main/SQL_Projects/Project_ecommerce_SalesAnalysis" target="_blank">View Project →</a>
+    </div>
+
+    <div class="card">
+      <h3>🏥 Healthcare No-Show Analysis (Python)</h3>
+      <p>Analyzed 110,000+ hospital appointment records to identify factors influencing no-shows using Pandas and visualization libraries.</p>
+      <a href="https://github.com/ParasSukheja/Data_Analyst_Portfolio/tree/main/Python_Projects/Project_Healthcare_Analysis" target="_blank">View Project →</a>
+    </div>
+
+    <div class="card">
+      <h3>🏦 Banking Analytics Dashboard (Power BI)</h3>
+      <p>
+        A Power BI project analyzing bank customers, accounts, loans, and transactions
+        to understand customer behavior, evaluate financial performance, and identify
+        risks such as loan defaults and potential fraud using interactive dashboards.
+      </p>
+      <a href="https://github.com/ParasSukheja/Data_Analyst_Portfolio/tree/main/Power_Bi_Projects/Project_Baking_Analytics" target="_blank">View Project →</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="resume">
+  <h2>Resume</h2>
+  <p>You can view or download my resume by clicking the button below:</p>
+  <a href="https://drive.google.com/file/d/1vvo8uBkU0WtQTBTk4jv2EToC_tYPYKwI/view?usp=sharing" target="_blank">View Resume →</a>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact">
+    <a href="mailto:sukheja.paras@gmail.com">📧 Email</a>
+    <a href="https://www.linkedin.com/in/paras-sukheja-689822327/" target="_blank">🔗 LinkedIn</a>
+    <a href="https://github.com/ParasSukheja" target="_blank">💻 GitHub</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Paras Sukheja | Portfolio Website</p>
+</footer>
+
+<script>
+function toggleMode(){
+  const body=document.body;
+  const toggle=document.getElementById("mode-toggle");
+  body.classList.toggle("dark");
+  toggle.textContent=body.classList.contains("dark")?"☀️":"🌙";
+}
+</script>
+
+</body>
+</html>
